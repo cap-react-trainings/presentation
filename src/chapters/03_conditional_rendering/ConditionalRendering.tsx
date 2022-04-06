@@ -89,7 +89,7 @@ const ConditionalRendering: React.FC = () => {
       <Slide>
         <h2>Component uses different return statements</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescape data-line-numbers>
             {sayHiComponent}
           </code>
         </pre>
@@ -97,13 +97,13 @@ const ConditionalRendering: React.FC = () => {
       <Slide>
         <h2>Conditionally assign component to varible</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescape data-line-numbers>
             {loginBtn} <br />
             {logoutBtn}
           </code>
         </pre>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescap data-line-numbers>
             {renderButton}
           </code>
         </pre>
@@ -111,7 +111,7 @@ const ConditionalRendering: React.FC = () => {
       <Slide>
         <h2>Inline Logic - variant 1</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescape data-line-numbers>
             {users}
           </code>
         </pre>
@@ -119,7 +119,7 @@ const ConditionalRendering: React.FC = () => {
       <Slide>
         <h2>Inline Logic - variant 2</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescape data-line-numbers>
             {users2}
           </code>
         </pre>
@@ -127,7 +127,7 @@ const ConditionalRendering: React.FC = () => {
       <Slide>
         <h2>Prevent component from rendering</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape data-line-numbers='1,4'>
+          <code data-trim data-noescape data-line-numbers>
             {users3}
           </code>
         </pre>

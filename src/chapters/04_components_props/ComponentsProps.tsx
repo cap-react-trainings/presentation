@@ -49,7 +49,7 @@ const bookDestructured = `
   const interface Book {
     id: number;
     name: string;
-    author; string;
+    author: string;
   }
 
   const Book: React.FC = ({ name, author }: Book) => {
@@ -63,6 +63,15 @@ const bookDestructured = `
 
   export default Book;
 `;
+
+const defaultProps = `
+const Book: FC = ({name="Tom", author="Rowling"}: Book) => {
+    return (
+      <>
+        <h1>{name}</h1>
+        <p>author: {author}</p>
+      </>
+    )}`;
 
 const classStyled = `
   const Book: React.FC = ({ name, author }: Book) => {
@@ -87,6 +96,20 @@ const stylesAttribute = `
   }
 `;
 
+const npmI = `npm install --save styled-components`;
+
+const styledComponent = `
+  import styled from 'styled-components';
+  const StyledAuthor = styled.p'
+  colour: 'green''
+  const Book: React.FC = ({ name, author }: Book) => {
+    return (<>
+        <h1 className='myHeadline'>{name}</h1>
+          // notice the double curly braces
+        <StyledAuthor>author: {author}</StyledAuthor>
+      </>)}
+  `;
+
 const ComponentsProps: React.FC = () => {
   return (
     <Slide>
@@ -97,12 +120,12 @@ const ComponentsProps: React.FC = () => {
       <Slide>
         <h2>Class Components vs. Functional Components</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {fnExample}
           </code>
         </pre>
         <pre className='fragment'>
-          <code data-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {classExample}
           </code>
         </pre>
@@ -128,7 +151,7 @@ const ComponentsProps: React.FC = () => {
       <Slide>
         <h2>Properties: Pass information down the component tree</h2>
         <pre className='fragment'>
-          <code data-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {bookList}
           </code>
         </pre>
@@ -136,7 +159,7 @@ const ComponentsProps: React.FC = () => {
       <Slide>
         <h2>Properties: not desctructured</h2>
         <pre className='fragment'>
-          <code dta-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {book}
           </code>
         </pre>
@@ -144,23 +167,41 @@ const ComponentsProps: React.FC = () => {
       <Slide>
         <h2>Properties: desctructured</h2>
         <pre className='fragment'>
-          <code dta-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {bookDestructured}
           </code>
         </pre>
+      </Slide>
+      <Slide>
+        <h2>Properties: desctructured vs not destructured</h2>
+        <ul>
+          <li className='fragment'>
+            Pro: easier to apply default values
+            <pre>
+              <code data-trim data-noescape data-line-numbers='1'>
+                {defaultProps}
+              </code>
+            </pre>
+          </li>
+          <li className='fragment'>
+            Con: in case of large components you might get confused which variables are defined in the component scope and which ones are
+            passed as props
+          </li>
+        </ul>
       </Slide>
       <Slide>
         <h2>Let's style our Booklist</h2>
         <ul className='fragment'>
           <li>via css classes</li>
           <li>via inline styling</li>
+          <li>CSS in JS</li>
         </ul>
       </Slide>
       <Slide>
         <h2>className</h2>
         <p className='fragment'>instead of using the 'class'-attribute, React expects 'className'</p>
         <pre className='fragment'>
-          <code dta-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {classStyled}
           </code>
         </pre>
@@ -170,8 +211,41 @@ const ComponentsProps: React.FC = () => {
         <p className='fragment'>inline styling is also possible via the well known 'style'-attribute</p>
         <p className='fragment'>notice the double curly braces, usual CSS-syntax inside</p>
         <pre className='fragment'>
-          <code dta-trim data-noescape>
+          <code data-trim data-noescape data-line-numbers>
             {stylesAttribute}
+          </code>
+        </pre>
+      </Slide>
+      <Slide>
+        <h2>CSS in JS</h2>
+        <ul className='fragment'>
+          <li>Style components using JavsScript</li>
+          <li>JavaScript power in CSS</li>
+          <li>no React built-in-feature -{`>`} external library</li>
+          <ul className='fragment'>
+            <li>
+              most popular: <a href='https://styled-components.com/'>Styled Components</a> (36K+ stars on GitHub)
+            </li>
+            <li>
+              also used by <a href='https://mui.com/system/styled/'>MUI</a>
+            </li>
+            <li>
+              hint: when working with MUI you should checkout the latest version of styling, `the system`, which implements{' '}
+              <a href='https://tailwindcss.com/'>tailwind</a> and makes your styling life a lot easier and esp. faster
+            </li>
+          </ul>
+        </ul>
+      </Slide>
+      <Slide>
+        <h2>CSS in JS - styled components</h2>
+        <pre className='fragment'>
+          <code data-trim data-noescape data-line-numbers>
+            {npmI}
+          </code>
+        </pre>
+        <pre className='fragment'>
+          <code data-trim data-noescape data-line-numbers='2, 3, 8'>
+            {styledComponent}
           </code>
         </pre>
       </Slide>
