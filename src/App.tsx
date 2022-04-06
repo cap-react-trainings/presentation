@@ -7,6 +7,7 @@ import ContextChapter from './chapters/05_context/ContextChapter';
 import FormsChapter from './chapters/07_forms/FormsChapter';
 import ConditionalRendering from './chapters/03_conditional_rendering/ConditionalRendering';
 import ComponentsProps from './chapters/04_components_props/ComponentsProps';
+import DatabindingHooks from './chapters/05_databinding/DatabindingHooks';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <FormsChapter />
       <ConditionalRendering />
       <ComponentsProps />
+      <DatabindingHooks />
     </RevealWrapper>
   );
 };
