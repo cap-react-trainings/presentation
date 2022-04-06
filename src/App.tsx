@@ -6,6 +6,7 @@ import IntroChapter from './chapters/00_Intro/IntroChapter';
 import ContextChapter from './chapters/05_context/ContextChapter';
 import FormsChapter from './chapters/07_forms/FormsChapter';
 import ConditionalRendering from './chapters/03_conditional_rendering/ConditionalRendering';
+import ComponentsProps from './chapters/04_components_props/ComponentsProps';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <ContextChapter />
       <FormsChapter />
       <ConditionalRendering />
+      <ComponentsProps />
     </RevealWrapper>
   );
 };
