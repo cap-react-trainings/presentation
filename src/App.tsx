@@ -4,6 +4,7 @@ import RevealWrapper from './components/reveal/RevealWrapper';
 import React from 'react';
 import ConditionalRendering from './chapters/03_conditional_rendering/ConditionalRendering';
 import ComponentsProps from './chapters/04_components_props/ComponentsProps';
+import DatabindingHooks from './chapters/05_databinding/DatabindingHooks';
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <JSX />
       <ConditionalRendering />
       <ComponentsProps />
+      <DatabindingHooks />
     </RevealWrapper>
   );
 };
