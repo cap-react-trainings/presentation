@@ -103,6 +103,9 @@ const JsxChapter: React.FC<GenericChapterProps> = (props: GenericChapterProps) =
           <li>JavaScript can be used inside JSX</li>
         </ul>
       </Slide>
+      <Slide>
+        <h2>💪 Exercise</h2>
+      </Slide>
     </Chapter>
   );
 };

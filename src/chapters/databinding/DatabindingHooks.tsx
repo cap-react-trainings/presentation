@@ -5,12 +5,12 @@ import Slide from '../../components/reveal/Slide';
 
 const useState = `
   const Numbers: React.FC = () => {
-    const [counter, setCounter] = useState<number>(0);
+    const [bookCounter, setBookCounter] = useState<number>(0);
 
     return (
-      <p>{counter}</p>
-      <button onClick={() => setCounter(counter + 1)}>
-        increase counter
+      <p>{bookCounter}</p>
+      <button onClick={() => setBookCounter(bookCounter + 1)}>
+        increase bookCounter
       </button>
     )
   }
@@ -180,6 +180,17 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
             {useState}
           </code>
         </pre>
+        <pre className='fragment'>
+          <a
+            style={{ fontSize: '1.7rem', marginTop: 4 }}
+            href='https://github.com/cap-react-trainings/code-examples/blob/04-hooks-usestate/react-training-codeexamples/src/App.tsx'
+          >
+            🚀 code example on GitHub
+          </a>
+        </pre>
+      </Slide>
+      <Slide>
+        <h2>💪 Exercise</h2>
       </Slide>
       <Slide>
         <h2>useEffect-Hook</h2>
@@ -196,6 +207,14 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
           <code data-trim data-noescape data-line-numbers>
             {loadingState}
           </code>
+        </pre>
+        <pre className='fragment'>
+          <a
+            style={{ fontSize: '1.7rem', marginTop: 4 }}
+            href='https://github.com/cap-react-trainings/code-examples/blob/04-hooks-useEffect/react-training-codeexamples/src/App.tsx'
+          >
+            🚀 code example on GitHub
+          </a>
         </pre>
       </Slide>
       <Slide>
@@ -233,6 +252,9 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
             {useBooks}
           </code>
         </pre>
+      </Slide>
+      <Slide>
+        <h2>💪 Exercise</h2>
       </Slide>
       <Slide>
         <h2>Excursus: useQuery (React Query)</h2>
@@ -273,6 +295,14 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
             {useQueryBooks}
           </code>
         </pre>
+        <pre className='fragment'>
+          <a
+            style={{ fontSize: '1.7rem', marginTop: 4 }}
+            href='https://github.com/cap-react-trainings/code-examples/blob/04-hooks-use-query/react-training-codeexamples/src/components/book-list/BookList.tsx'
+          >
+            🚀 code example on GitHub
+          </a>
+        </pre>
       </Slide>
       <Slide>
         <h2>Angular Excursus: Observable vs State</h2>
@@ -288,6 +318,9 @@ const DatabindingHooksChapter: React.FC<GenericChapterProps> = (props: GenericCh
             {ObservableMobX}
           </code>
         </pre>
+      </Slide>
+      <Slide>
+        <h2>💪 Exercise</h2>
       </Slide>
     </Chapter>
   );
