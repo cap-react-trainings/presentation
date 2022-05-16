@@ -97,7 +97,7 @@ const stylesAttribute = `
   }
 `;
 
-const npmI = `npm install --save styled-components`;
+const yarnAdd = `yarn add --save styled-components`;
 
 const styledComponent = `
   import styled from 'styled-components';
@@ -130,8 +130,10 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       </Slide>
       <Slide>
         <h2>Class Components vs. Functional Components</h2>
-        <p className='fragment'>Whats the differnce? When should I use which one?</p>
-        <ul className='fragment'>
+        <p className='fragment' style={{ fontSize: '2.2rem' }}>
+          Whats the differnce? When should I use which one?
+        </p>
+        <ul className='fragment' style={{ fontSize: '2.2rem' }}>
           <li>hisotrical reasons: no state-management / lifecycle hooks before 2019 in functional components</li>
           <li>nowadays: hardly any usage of class components</li>
           <li>functional components are easier to read and test, less code, better preformance</li>
@@ -171,7 +173,7 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
       </Slide>
       <Slide>
         <h2>Properties: desctructured vs not destructured</h2>
-        <ul>
+        <ul style={{ fontSize: '2rem' }}>
           <li className='fragment'>
             Pro: easier to apply default values
             <pre>
@@ -237,7 +239,7 @@ const ComponentsChapter: React.FC<GenericChapterProps> = (props: GenericChapterP
         <h2>CSS in JS - styled components</h2>
         <pre className='fragment'>
           <code data-trim data-noescape data-line-numbers>
-            {npmI}
+            {yarnAdd}
           </code>
         </pre>
         <pre className='fragment'>

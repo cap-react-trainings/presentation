@@ -35,23 +35,22 @@ const loadingState = `
   `;
 
 const booksByAuthor = `
-  const [author, setAuthor] = useState<Author>()
-  const [books, setBooks] = useState<Book[]>()
-  const authorOptions: Author[] = [{id: 1, name: "Shakespeare"}, {id: 2, name: "Melville"}]
+  const [currentBooks, setCurrentBooks] = useState<Book[]>()
+  const [selectedBook, setSelectedBook] = useState<Book>()
   useEffect(() => {
-    fetch('https://api.example.com/books?author={author.id}')
-      .then(response => response.json())
-      .then(data => {
-        setBooks(data)
-        setLoading(false)
-      })
-  }, [author])  // hook runs whenever the author changes
+    const booksByAuthor = props.books
+      .filter(book => book.author === props.author)
+    setCurrentBooks(booksByAuthor)
+    setSelectedBook(booksByAuthor[0])
+  }, [props.author]) // hook runs when props.author changes
 
   return(
     <>
-      <Select options={authorOptions} onChange={e => setAuthor(e.target.value)}/>
-      <p>Books by {author.name}</p>
-      <BookList books={books} />
+      <Select
+        options={currentBooks}
+        onChange={e => setSelectedBook(e.target.value)}/>
+      <p>Books by {props.author.name}</p>
+      <BookList books={currentBooks} />
     </>
   )
   `;
@@ -61,7 +60,7 @@ const subscribeToBooks = `
       BooksApi.subscribeToUpdates(props.user.id);
       /**
        * return function only runs once before 
-       * component's lifecycle is being destryed
+       * component's lifecycle is being destroyed
        */
       return () => {
         BooksApi.unsubscribeFromUpdates(props.user.id)
