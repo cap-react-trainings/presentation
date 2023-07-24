@@ -96,13 +96,11 @@ const App: React.FC = () => {
       <Slide isMain>
         <h2>🙋‍♀️ Who are you?</h2>
         <div style={{ textAlign: 'left', display: 'inline-block' }}>
-          Let's get to know each other on{' '}
-          <a
-            style={{ color: '#F48FB1', textDecoration: 'underline' }}
-            href='https://app.mural.co/invitation/mural/dcx6016/1671440000180?sender=u67ac3f75ad329840b6034527&key=5ba8746e-9bf6-4976-b7b9-6979d859125d'
-          >
-            Mural
-          </a>
+          <ul style={{ listStyle: 'none' }}>
+            <li>⦿ Which office to you belong to?</li>
+            <li>☞ What is your current role and project?</li>
+            <li>🏁 What is your goal considering this training?</li>
+          </ul>
         </div>
       </Slide>
       <TableOfContents chapter={chapter} />
